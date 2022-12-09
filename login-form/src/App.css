@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .App {
   text-align: center;
@@ -8,7 +9,21 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: linear-gradient(79deg, #e5bef5,#b667d6 40%,#fbc486);
+  background-image: linear-gradient(79deg, #bbf8ea,#38866f 40%,#509dae);
+}
+.sections{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.auth-form-container{
+  background-color: rgba(3, 3, 3, 0.018);
+  box-shadow: 10px 10px rgba(68, 68, 68, 0.050);
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.034);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  width: 19rem;
 }
 .auth-form-container, 
 .login-form, 
@@ -16,34 +31,96 @@
   display: flex;
   flex-direction: column;
 }
+h2{
+  color: rgb(252, 231, 223);
+  margin-bottom: 2rem;
+  padding: 0;
+  text-align: center;
+}
 label{
   text-align: left;
   padding: 1rem 0;
+  color: rgb(255, 241, 236);
+  font-weight: bold;
 }
 input{
   margin: 0.25rem 0;
   padding: 1rem;
   border:none;
   border-radius: 1rem;
+  width: 90%;
+
+}
+p{
+  font-size: small;
+  padding: 0.25rem;
+  margin-top: 0.75rem;
+  color: rgb(241, 238, 235);
+  font-weight: 900;
 }
 button{
   border: none;
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 3rem;
   cursor: pointer;
-  color: #8122a6;
+  color: #2a6654;
+  margin-top: 0.5rem;
+  font-weight: bolder;
+}
+button:hover{
+  background-color:#2a6654;
+  color: #fff;
 }
 .link-btn{
   background:none;
-  color: #fff;
+  /* color: #1a3f2e; */
+  color: rgb(252, 231, 223);
   text-decoration: underline;
+  margin: 0;
+  cursor: pointer;
+
 }
-@media screen and (min-width:680px){
+@media screen and (max-width:680px){
   .auth-form-container{
-    padding: 5rem;
+    padding: 3rem 2rem;
     border: 1px solid #fff;
     border-radius: 1rem;
     margin: 0.5rem;
+    width: 100%;
+    height: auto;
   }
+}
+@media screen and (max-width:280px) {
+  input{
+    width: 80%;
+    padding: 20px;
+    margin: 0.25rem 0;
+  }
+  .auth-form-container{
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    padding: 1rem 0 0 1rem;
+  }
+  p{
+    font-size: small;
+    padding: 0;
+    margin: 2rem;
+  }
+  button{
+    border: none;
+    padding: 20px;
+    border-radius: 3rem;
+    cursor: pointer; 
+    width: 92%;
+    background-color: #fff;
+    color: #8122a6;
+    margin: 0;
+  }
+  .link-btn{
+    background:none;
+    color: #fff;
+    text-decoration: underline;
+    margin: 0.25rem;
+  } 
 }
