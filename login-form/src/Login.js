@@ -9,8 +9,9 @@ export const Login = (props) => {
     }
 
   return (
-    <>
-      <form>
+    <div className="auth-form-container">
+      <h2>Login</h2>
+      <form className='login-form'>
           <label htmlFor="email">E-mail:</label>
           <input 
           value={email}
@@ -27,10 +28,11 @@ export const Login = (props) => {
           <button>Login</button>
       </form>
       <button
-      onClick={()=> props.onFormSwitch ('register')}>
+      onClick={()=> props.onFormSwitch ('register')}
+      className="link-btn">
         Don't have an account? Create an account.
       </button>
-    </>
+    </div>
     
   )
 }

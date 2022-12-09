@@ -10,8 +10,9 @@ export const Register = (props) => {
   }
 
   return (
-    <>
-      <form>
+    <div className="auth-form-container">
+      <h2>Register</h2>
+      <form className="register-form"> 
         <label htmlFor="name">Full name:</label>
         <input value={name}
         onChange={(e)=>setName(e.target.value)}
@@ -31,9 +32,11 @@ export const Register = (props) => {
           onChange={(e)=>setPass(e.target.value)}/>
         <button>Register</button>
       </form>
-      <button onClick={()=>props.onFormSwitch('login')}>
+      <button 
+      onClick={()=>props.onFormSwitch('login')}
+      className="link-btn">
         Do you have an account already? Login from here!
       </button>
-    </>
+    </div>
   )
 }
